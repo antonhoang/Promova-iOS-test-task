@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C574B4322B5AB1AB007344F2 /* Promova_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B4312B5AB1AB007344F2 /* Promova_iOSApp.swift */; };
+		C574B4342B5AB1AB007344F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B4332B5AB1AB007344F2 /* ContentView.swift */; };
+		C574B4362B5AB1B0007344F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C574B4352B5AB1B0007344F2 /* Assets.xcassets */; };
+		C574B4392B5AB1B0007344F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C574B4382B5AB1B0007344F2 /* Preview Assets.xcassets */; };
+		C574B4432B5AB1B1007344F2 /* Promova_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B4422B5AB1B1007344F2 /* Promova_iOSTests.swift */; };
+		C574B44D2B5AB1B1007344F2 /* Promova_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B44C2B5AB1B1007344F2 /* Promova_iOSUITests.swift */; };
+		C574B44F2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B44E2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C574B43F2B5AB1B1007344F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C574B4262B5AB1AA007344F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C574B42D2B5AB1AB007344F2;
+			remoteInfo = "Promova-iOS";
+		};
+		C574B4492B5AB1B1007344F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C574B4262B5AB1AA007344F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C574B42D2B5AB1AB007344F2;
+			remoteInfo = "Promova-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C574B42E2B5AB1AB007344F2 /* Promova-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Promova-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C574B4312B5AB1AB007344F2 /* Promova_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promova_iOSApp.swift; sourceTree = "<group>"; };
+		C574B4332B5AB1AB007344F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C574B4352B5AB1B0007344F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C574B4382B5AB1B0007344F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C574B43E2B5AB1B1007344F2 /* Promova-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Promova-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C574B4422B5AB1B1007344F2 /* Promova_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promova_iOSTests.swift; sourceTree = "<group>"; };
+		C574B4482B5AB1B1007344F2 /* Promova-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Promova-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C574B44C2B5AB1B1007344F2 /* Promova_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promova_iOSUITests.swift; sourceTree = "<group>"; };
+		C574B44E2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promova_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C574B42B2B5AB1AB007344F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C574B43B2B5AB1B1007344F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C574B4452B5AB1B1007344F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C574B4252B5AB1AA007344F2 = {
+			isa = PBXGroup;
+			children = (
+				C574B4302B5AB1AB007344F2 /* Promova-iOS */,
+				C574B4412B5AB1B1007344F2 /* Promova-iOSTests */,
+				C574B44B2B5AB1B1007344F2 /* Promova-iOSUITests */,
+				C574B42F2B5AB1AB007344F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C574B42F2B5AB1AB007344F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C574B42E2B5AB1AB007344F2 /* Promova-iOS.app */,
+				C574B43E2B5AB1B1007344F2 /* Promova-iOSTests.xctest */,
+				C574B4482B5AB1B1007344F2 /* Promova-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C574B4302B5AB1AB007344F2 /* Promova-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C574B4312B5AB1AB007344F2 /* Promova_iOSApp.swift */,
+				C574B4332B5AB1AB007344F2 /* ContentView.swift */,
+				C574B4352B5AB1B0007344F2 /* Assets.xcassets */,
+				C574B4372B5AB1B0007344F2 /* Preview Content */,
+			);
+			path = "Promova-iOS";
+			sourceTree = "<group>";
+		};
+		C574B4372B5AB1B0007344F2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C574B4382B5AB1B0007344F2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C574B4412B5AB1B1007344F2 /* Promova-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				C574B4422B5AB1B1007344F2 /* Promova_iOSTests.swift */,
+			);
+			path = "Promova-iOSTests";
+			sourceTree = "<group>";
+		};
+		C574B44B2B5AB1B1007344F2 /* Promova-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C574B44C2B5AB1B1007344F2 /* Promova_iOSUITests.swift */,
+				C574B44E2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift */,
+			);
+			path = "Promova-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C574B42D2B5AB1AB007344F2 /* Promova-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C574B4522B5AB1B1007344F2 /* Build configuration list for PBXNativeTarget "Promova-iOS" */;
+			buildPhases = (
+				C574B42A2B5AB1AB007344F2 /* Sources */,
+				C574B42B2B5AB1AB007344F2 /* Frameworks */,
+				C574B42C2B5AB1AB007344F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Promova-iOS";
+			productName = "Promova-iOS";
+			productReference = C574B42E2B5AB1AB007344F2 /* Promova-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C574B43D2B5AB1B1007344F2 /* Promova-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C574B4552B5AB1B1007344F2 /* Build configuration list for PBXNativeTarget "Promova-iOSTests" */;
+			buildPhases = (
+				C574B43A2B5AB1B1007344F2 /* Sources */,
+				C574B43B2B5AB1B1007344F2 /* Frameworks */,
+				C574B43C2B5AB1B1007344F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C574B4402B5AB1B1007344F2 /* PBXTargetDependency */,
+			);
+			name = "Promova-iOSTests";
+			productName = "Promova-iOSTests";
+			productReference = C574B43E2B5AB1B1007344F2 /* Promova-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C574B4472B5AB1B1007344F2 /* Promova-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C574B4582B5AB1B1007344F2 /* Build configuration list for PBXNativeTarget "Promova-iOSUITests" */;
+			buildPhases = (
+				C574B4442B5AB1B1007344F2 /* Sources */,
+				C574B4452B5AB1B1007344F2 /* Frameworks */,
+				C574B4462B5AB1B1007344F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C574B44A2B5AB1B1007344F2 /* PBXTargetDependency */,
+			);
+			name = "Promova-iOSUITests";
+			productName = "Promova-iOSUITests";
+			productReference = C574B4482B5AB1B1007344F2 /* Promova-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C574B4262B5AB1AA007344F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					C574B42D2B5AB1AB007344F2 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					C574B43D2B5AB1B1007344F2 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C574B42D2B5AB1AB007344F2;
+					};
+					C574B4472B5AB1B1007344F2 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C574B42D2B5AB1AB007344F2;
+					};
+				};
+			};
+			buildConfigurationList = C574B4292B5AB1AA007344F2 /* Build configuration list for PBXProject "Promova-iOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C574B4252B5AB1AA007344F2;
+			productRefGroup = C574B42F2B5AB1AB007344F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C574B42D2B5AB1AB007344F2 /* Promova-iOS */,
+				C574B43D2B5AB1B1007344F2 /* Promova-iOSTests */,
+				C574B4472B5AB1B1007344F2 /* Promova-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C574B42C2B5AB1AB007344F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C574B4392B5AB1B0007344F2 /* Preview Assets.xcassets in Resources */,
+				C574B4362B5AB1B0007344F2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C574B43C2B5AB1B1007344F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C574B4462B5AB1B1007344F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C574B42A2B5AB1AB007344F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C574B4342B5AB1AB007344F2 /* ContentView.swift in Sources */,
+				C574B4322B5AB1AB007344F2 /* Promova_iOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C574B43A2B5AB1B1007344F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C574B4432B5AB1B1007344F2 /* Promova_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C574B4442B5AB1B1007344F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C574B44D2B5AB1B1007344F2 /* Promova_iOSUITests.swift in Sources */,
+				C574B44F2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C574B4402B5AB1B1007344F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C574B42D2B5AB1AB007344F2 /* Promova-iOS */;
+			targetProxy = C574B43F2B5AB1B1007344F2 /* PBXContainerItemProxy */;
+		};
+		C574B44A2B5AB1B1007344F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C574B42D2B5AB1AB007344F2 /* Promova-iOS */;
+			targetProxy = C574B4492B5AB1B1007344F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C574B4502B5AB1B1007344F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C574B4512B5AB1B1007344F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C574B4532B5AB1B1007344F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Promova-iOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Promova-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C574B4542B5AB1B1007344F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Promova-iOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Promova-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C574B4562B5AB1B1007344F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Promova-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Promova-iOS.app/Promova-iOS";
+			};
+			name = Debug;
+		};
+		C574B4572B5AB1B1007344F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Promova-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Promova-iOS.app/Promova-iOS";
+			};
+			name = Release;
+		};
+		C574B4592B5AB1B1007344F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Promova-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Promova-iOS";
+			};
+			name = Debug;
+		};
+		C574B45A2B5AB1B1007344F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Promova-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Promova-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C574B4292B5AB1AA007344F2 /* Build configuration list for PBXProject "Promova-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C574B4502B5AB1B1007344F2 /* Debug */,
+				C574B4512B5AB1B1007344F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C574B4522B5AB1B1007344F2 /* Build configuration list for PBXNativeTarget "Promova-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C574B4532B5AB1B1007344F2 /* Debug */,
+				C574B4542B5AB1B1007344F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C574B4552B5AB1B1007344F2 /* Build configuration list for PBXNativeTarget "Promova-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C574B4562B5AB1B1007344F2 /* Debug */,
+				C574B4572B5AB1B1007344F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C574B4582B5AB1B1007344F2 /* Build configuration list for PBXNativeTarget "Promova-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C574B4592B5AB1B1007344F2 /* Debug */,
+				C574B45A2B5AB1B1007344F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C574B4262B5AB1AA007344F2 /* Project object */;
+}

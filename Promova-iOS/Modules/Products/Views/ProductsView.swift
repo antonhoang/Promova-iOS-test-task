@@ -34,6 +34,12 @@ struct ProductsView: View {
             }
             .onAppear {
                 UITableView.appearance().backgroundColor = .init(hex:  0xBEC8FF)
+                
+                let endpoint = AnimalEndpoint()
+                Task {
+                    let result = try await NetworkAPI().asyncRequest(endPoint: endpoint, responseModel: [AnimalModel].self)
+                    print(result)
+                }
             }
             .navigationBarHidden(true)
         }

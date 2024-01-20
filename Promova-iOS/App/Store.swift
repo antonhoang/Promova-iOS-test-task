@@ -16,23 +16,36 @@ import Combine
 protocol Action { }
 typealias Reducer<State> = (State, Action) -> State
 
-struct GetProducts: Action {
+struct GetAnimals: Action {
     
 }
 
 class Store<State>: ObservableObject {
     @Published private(set) var state: State
     private let reducer: Reducer<State>
-    
-    init(state: State, reducer: @escaping Reducer<State>) {
+    private let network: NetworkProtocol
+    init(
+        state: State,
+        reducer: @escaping Reducer<State>,
+        network: NetworkProtocol
+    ) {
         self.state = state
         self.reducer = reducer
+        self.network = network
       }
     
     func dispatch(_ action: Action) {
         let newState = reducer(state, action)
-        
 //        reducer.update(&state, action)
+    }
+    
+    func fetchData() {
+        let endpoint = AnimalEndpoint()
+        Task {
+            let result = try await network.asyncRequest(endPoint: endpoint, responseModel: AnimalModel.self)
+            print(result)
+        }
+        
     }
 }
 

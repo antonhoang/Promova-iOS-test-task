@@ -23,6 +23,9 @@
 		C574B45E2B5ACE59007344F2 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B45D2B5ACE59007344F2 /* NetworkAPI.swift */; };
 		C57B789A2B5BD79B00F30377 /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B78992B5BD79B00F30377 /* ProductDetails.swift */; };
 		C57B789D2B5C2C3C00F30377 /* View+NavigationShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B789C2B5C2C3C00F30377 /* View+NavigationShadow.swift */; };
+		C57B789F2B5C31B200F30377 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B789E2B5C31B200F30377 /* RequestMethod.swift */; };
+		C57B78A12B5C31EA00F30377 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B78A02B5C31EA00F30377 /* ApiError.swift */; };
+		C57B78A32B5C31FC00F30377 /* EndpointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B78A22B5C31FC00F30377 /* EndpointProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		C574B45D2B5ACE59007344F2 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
 		C57B78992B5BD79B00F30377 /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 		C57B789C2B5C2C3C00F30377 /* View+NavigationShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationShadow.swift"; sourceTree = "<group>"; };
+		C57B789E2B5C31B200F30377 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		C57B78A02B5C31EA00F30377 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		C57B78A22B5C31FC00F30377 /* EndpointProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +217,7 @@
 		C574B4302B5AB1AB007344F2 /* Promova-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C57B78A52B5C37AD00F30377 /* Repository */,
 				C502B94A2B5BB323004A8AA4 /* Extensions */,
 				C502B9452B5B2FD0004A8AA4 /* GlobalStates */,
 				C502B9412B5B2F00004A8AA4 /* Models */,
@@ -254,7 +261,7 @@
 		C574B45C2B5ACE2E007344F2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C574B45D2B5ACE59007344F2 /* NetworkAPI.swift */,
+				C57B78A42B5C32D700F30377 /* Network */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -264,6 +271,24 @@
 			children = (
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		C57B78A42B5C32D700F30377 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C574B45D2B5ACE59007344F2 /* NetworkAPI.swift */,
+				C57B78A22B5C31FC00F30377 /* EndpointProvider.swift */,
+				C57B78A02B5C31EA00F30377 /* ApiError.swift */,
+				C57B789E2B5C31B200F30377 /* RequestMethod.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C57B78A52B5C37AD00F30377 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,13 +427,16 @@
 				C502B9492B5B32F1004A8AA4 /* ProductCellView.swift in Sources */,
 				C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */,
 				C57B789A2B5BD79B00F30377 /* ProductDetails.swift in Sources */,
+				C57B78A32B5C31FC00F30377 /* EndpointProvider.swift in Sources */,
 				C502B9502B5BBDA7004A8AA4 /* ProductMocks.swift in Sources */,
+				C57B789F2B5C31B200F30377 /* RequestMethod.swift in Sources */,
 				C574B4342B5AB1AB007344F2 /* ContentView.swift in Sources */,
 				C574B4322B5AB1AB007344F2 /* Promova_iOSApp.swift in Sources */,
 				C502B9472B5B32C2004A8AA4 /* ProductsView.swift in Sources */,
 				C502B9442B5B2F2E004A8AA4 /* Product.swift in Sources */,
 				C57B789D2B5C2C3C00F30377 /* View+NavigationShadow.swift in Sources */,
 				C574B45E2B5ACE59007344F2 /* NetworkAPI.swift in Sources */,
+				C57B78A12B5C31EA00F30377 /* ApiError.swift in Sources */,
 				C5224B2C2B5B2340003D1451 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

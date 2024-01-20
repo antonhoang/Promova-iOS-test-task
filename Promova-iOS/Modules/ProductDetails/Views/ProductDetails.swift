@@ -26,36 +26,7 @@ struct ProductDetails: View {
                     .navigationBarShadow(opacity: 0.25, x: 0, y: 8)
                     .padding([.top], 20)
                 Spacer()
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.white)
-                    .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height / 1.7, alignment: .center)
-                    .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 20)
-                    .overlay {
-                        VStack {
-                            Image("BitmapFullSize")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .padding()
-                            Text("Fact text")
-                            Spacer()
-                            HStack {
-                                Button(action: {
-                                    print("Button tapped!")
-                                }) {
-                                    Image("back 1")
-                                }
-                                .padding()
-                                Spacer()
-                                Button(action: {
-                                    print("Button tapped!")
-                                }) {
-                                    Image("next 1")
-                                }
-                                .padding()
-                                
-                            }
-                        }
-                    }
+                cardView
                     .padding()
                 Spacer()
             }
@@ -73,19 +44,41 @@ struct ProductDetails: View {
                     }
                 })
     }
-}
-
-extension View {
-    func navigationBarShadow(opacity: CGFloat = 0, x: CGFloat = 0, y: CGFloat = 0) -> some View {
+    
+    private var cardView: some View {
+        RoundedRectangle(cornerRadius: 10)
+            .fill(Color.white)
+            .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height / 1.7, alignment: .center)
+            .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 20)
+            .overlay {
+                cardContent
+            }
+    }
+    
+    private var cardContent: some View {
         VStack {
-            overlay(
-                LinearGradient(
-                    gradient: Gradient(colors: [Color.black.opacity(opacity), Color.clear]),
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-                    .frame(height: y)
-            )
+            Image("BitmapFullSize")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding()
+            Text("Fact text")
+            Spacer()
+            HStack {
+                Button(action: {
+                    print("Button tapped!")
+                }) {
+                    Image("back 1")
+                }
+                .padding()
+                Spacer()
+                Button(action: {
+                    print("Button tapped!")
+                }) {
+                    Image("next 1")
+                }
+                .padding()
+                
+            }
         }
     }
 }

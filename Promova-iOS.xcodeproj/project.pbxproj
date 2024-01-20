@@ -22,6 +22,7 @@
 		C574B44F2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B44E2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift */; };
 		C574B45E2B5ACE59007344F2 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B45D2B5ACE59007344F2 /* NetworkAPI.swift */; };
 		C57B789A2B5BD79B00F30377 /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B78992B5BD79B00F30377 /* ProductDetails.swift */; };
+		C57B789D2B5C2C3C00F30377 /* View+NavigationShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B789C2B5C2C3C00F30377 /* View+NavigationShadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		C574B44E2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promova_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C574B45D2B5ACE59007344F2 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
 		C57B78992B5BD79B00F30377 /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
+		C57B789C2B5C2C3C00F30377 /* View+NavigationShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationShadow.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				C502B94B2B5BB335004A8AA4 /* UIColor+Hex.swift */,
+				C57B789C2B5C2C3C00F30377 /* View+NavigationShadow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				C574B4322B5AB1AB007344F2 /* Promova_iOSApp.swift in Sources */,
 				C502B9472B5B32C2004A8AA4 /* ProductsView.swift in Sources */,
 				C502B9442B5B2F2E004A8AA4 /* Product.swift in Sources */,
+				C57B789D2B5C2C3C00F30377 /* View+NavigationShadow.swift in Sources */,
 				C574B45E2B5ACE59007344F2 /* NetworkAPI.swift in Sources */,
 				C5224B2C2B5B2340003D1451 /* Store.swift in Sources */,
 			);

@@ -90,6 +90,7 @@
 		C502B93A2B5B2C1D004A8AA4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C57B789B2B5BE99400F30377 /* SplashScreen */,
 				C502B93B2B5B2C2D004A8AA4 /* Products */,
 				C502B93E2B5B2C53004A8AA4 /* ProductDetails */,
 			);
@@ -253,6 +254,13 @@
 				C574B45D2B5ACE59007344F2 /* NetworkAPI.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C57B789B2B5BE99400F30377 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SplashScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

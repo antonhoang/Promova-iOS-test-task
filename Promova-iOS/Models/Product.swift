@@ -16,7 +16,7 @@ struct Product: Identifiable {
     let order: Int
     let status: ProductState
     let content: [Content]
-    
+    #warning("if Product State is empty provide an comingSoon")
     enum ProductState {
         case free
         case paid

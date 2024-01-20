@@ -49,7 +49,7 @@ struct ProductDetails: View {
         RoundedRectangle(cornerRadius: 10)
             .fill(Color.white)
             .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height / 1.7, alignment: .center)
-            .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 20)
+            .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 20)
             .overlay {
                 cardContent
             }

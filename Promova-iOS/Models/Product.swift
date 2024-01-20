@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Product: Identifiable {
+struct Animal: Identifiable {
     let id = UUID()
     let title: String
     let description: String
@@ -16,12 +16,6 @@ struct Product: Identifiable {
     let order: Int
     let status: ProductState
     let content: [Content]
-    #warning("if Product State is empty provide an comingSoon")
-    enum ProductState: String, Codable {
-        case free
-        case paid
-        case comingSoon
-    }
     
     struct Content {
         let fact: String
@@ -29,6 +23,17 @@ struct Product: Identifiable {
     }
 }
 
+enum ProductState: String, Codable {
+    case free
+    case paid
+    case comingSoon
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let rawValue = try container.decode(String.self)
+        self = ProductState(rawValue: rawValue) ?? .comingSoon
+    }
+}
 
 
 struct AnimalModel: Codable {
@@ -36,24 +41,12 @@ struct AnimalModel: Codable {
     let description: String
     let image: String
     let order: Int
-    let status: FactStatus?
+    let status: ProductState?
     let content: [Content]?
     
     struct Content: Codable {
         let fact: String
         let image: String
-    }
-    
-    enum FactStatus: String, Codable {
-        case free
-        case paid
-        case comingSoon
-
-        init(from decoder: Decoder) throws {
-            let container = try decoder.singleValueContainer()
-            let rawValue = try container.decode(String.self)
-            self = FactStatus(rawValue: rawValue) ?? .comingSoon
-        }
     }
 
 }

@@ -35,10 +35,8 @@ class NetworkAPI: NetworkProtocol {
         case 200...299:
             do {
                 return try JSONDecoder().decode(T.self, from: data)
-            } catch let error {
-                print(error)
-                throw error
-//                throw APIError.decodingFailed
+            } catch {
+                throw APIError.decodingFailed
             }
         default:
             throw APIError.decodingFailed

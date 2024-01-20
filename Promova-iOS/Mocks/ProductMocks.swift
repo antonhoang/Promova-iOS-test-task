@@ -9,7 +9,7 @@
 import Foundation
 
 
-let mockProducts: [Product] = [
+let mockProducts: [Animal] = [
     .init(
         title: "Title 1",
         description: "Description 1",

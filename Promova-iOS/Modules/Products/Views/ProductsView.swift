@@ -12,17 +12,17 @@ struct ProductsView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(mockProducts) { product in
+                ForEach(mockProducts) { animal in
                     ZStack {
-                        ProductCellView(product: .init(
-                            title: product.title,
-                            description: product.description,
-                            image: product.image,
-                            order: product.order,
-                            status: product.status,
-                            content: product.content)
+                        ProductCellView(animal: .init(
+                            title: animal.title,
+                            description: animal.description,
+                            image: animal.image,
+                            order: animal.order,
+                            status: animal.status,
+                            content: animal.content)
                         )
-                        NavigationLink(destination: ProductDetails(product: product), label: { EmptyView() } )
+                        NavigationLink(destination: ProductDetails(animal: animal), label: { EmptyView() } )
                     }
                 }
                 .background(Color.white)

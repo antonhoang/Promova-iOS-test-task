@@ -11,10 +11,10 @@ import SwiftUI
 struct ProductDetails: View {
 //    @EnvironmentObject private var store: Store
     @Environment(\.dismiss) var dismiss
-    let product: Product
+    let animal: Animal
 
-    init(product: Product) {
-        self.product = product
+    init(animal: Animal) {
+        self.animal = animal
     }
     
     var body: some View {
@@ -86,7 +86,7 @@ struct ProductDetails: View {
 struct ProductDetails_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ProductDetails(product: mockProducts.first!)
+            ProductDetails(animal: mockProducts.first!)
         }
     }
 }

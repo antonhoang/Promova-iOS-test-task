@@ -10,15 +10,14 @@ import SwiftUI
 
 struct ProductCellView: View {
     
-    let product: Product
+    let animal: Animal
     
     var body: some View {
-        
         HStack(alignment: .top) {
-            productImage
+            animalImage
             VStack(alignment: .leading) {
-                productTitle
-                productDescription
+                animalTitle
+                animalDescription
                 
                 statusView(for: .paid)
                     .padding([.top])
@@ -28,7 +27,7 @@ struct ProductCellView: View {
             Spacer()
             statusView(for: .comingSoon)
         }
-        .overlay(product.status == .comingSoon ? Color.black.opacity(0.6) : Color.clear)
+        .overlay(animal.status == .comingSoon ? Color.black.opacity(0.6) : Color.clear)
     }
     
     struct StatusView: View {
@@ -47,8 +46,8 @@ struct ProductCellView: View {
     }
     
     @ViewBuilder
-    private func statusView(for status: Product.ProductState) -> some View {
-        if product.status == status {
+    private func statusView(for status: ProductState) -> some View {
+        if animal.status == status {
             switch status {
             case .paid:
                 StatusView(
@@ -68,20 +67,20 @@ struct ProductCellView: View {
         }
     }
     
-    private var productImage: some View {
-        Image(product.image)
+    private var animalImage: some View {
+        Image(animal.image)
             .aspectRatio(contentMode: .fit)
             .padding(8)
     }
     
-    private var productTitle: some View {
-        Text(product.title)
+    private var animalTitle: some View {
+        Text(animal.title)
             .font(.headline)
             .foregroundColor(.black)
     }
     
-    private var productDescription: some View {
-        Text(product.description)
+    private var animalDescription: some View {
+        Text(animal.description)
             .font(.subheadline)
             .foregroundColor(.gray)
     }
@@ -89,7 +88,7 @@ struct ProductCellView: View {
 
 struct ProductCellView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductCellView(product: .init(
+        ProductCellView(animal: .init(
             title: "Title",
             description: "Description",
             image: "Bitmap",

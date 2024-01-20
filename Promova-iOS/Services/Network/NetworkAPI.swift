@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 protocol NetworkProtocol {
+    func asyncLoadImage(url: URL) async throws -> Data
     func asyncRequest<T: Decodable>(endPoint: EndpointProvider, responseModel: T.Type) async throws -> T
 }
 
@@ -27,7 +28,24 @@ class NetworkAPI: NetworkProtocol {
         return try mapResponse(data: data, response: response)
     }
     
-    func mapResponse<T: Decodable>(data: Data, response: URLResponse) throws -> T {
+    func asyncLoadImage(url: URL) async throws -> Data {
+        let (data, response) = try await session.data(for: URLRequest(url: url))
+        return try mapImageResponse(data: data, response: response)
+    }
+    
+    private func mapImageResponse(data: Data, response: URLResponse) throws -> Data {
+          guard let response = response as? HTTPURLResponse else {
+              throw APIError.unknown
+          }
+          switch response.statusCode {
+          case 200...299:
+              return data
+          default:
+              throw APIError.decodingFailed
+          }
+      }
+    
+    private func mapResponse<T: Decodable>(data: Data, response: URLResponse) throws -> T {
         guard let response = response as? HTTPURLResponse else {
             throw APIError.unknown
         }

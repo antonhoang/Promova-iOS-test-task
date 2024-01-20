@@ -13,21 +13,21 @@ let mockProducts: [Animal] = [
     .init(
         title: "Title 1",
         description: "Description 1",
-        image: "Bitmap",
+        image: Data(),
         order: 1,
         status: .free,
         content: []),
     .init(
         title: "Title 2",
         description: "Description 2",
-        image: "Bitmap",
+        image: Data(),
         order: 1,
         status: .paid,
         content: []),
     .init(
         title: "Title 3",
         description: "Description 3",
-        image: "Bitmap",
+        image: Data(),
         order: 1,
         status: .comingSoon,
         content: [])

@@ -14,7 +14,20 @@ struct ProductCellView: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            animalImage
+            if let im = UIImage(data: animal.image) {
+                ZStack {
+                    Image(uiImage: im)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: UIScreen.main.bounds.width / 2.5,
+                               maxHeight: UIScreen.main.bounds.width / 3.5)
+                        .background(Color.gray)
+                        .padding(8)
+                    
+                }
+            } else {
+                Image("Bitmap")
+            }
             VStack(alignment: .leading) {
                 animalTitle
                 animalDescription
@@ -67,12 +80,6 @@ struct ProductCellView: View {
         }
     }
     
-    private var animalImage: some View {
-        Image(animal.image)
-            .aspectRatio(contentMode: .fit)
-            .padding(8)
-    }
-    
     private var animalTitle: some View {
         Text(animal.title)
             .font(.headline)
@@ -91,7 +98,7 @@ struct ProductCellView_Previews: PreviewProvider {
         ProductCellView(animal: .init(
             title: "Title",
             description: "Description",
-            image: "Bitmap",
+            image: Data(),
             order: 1,
             status: .comingSoon,
             content: [])

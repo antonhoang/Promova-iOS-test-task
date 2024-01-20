@@ -15,7 +15,7 @@ struct ProductsView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(mockProducts) { animal in
+                ForEach(store.state.animals, id: \.title) { animal in
                     ZStack {
                         ProductCellView(animal: .init(
                             title: animal.title,

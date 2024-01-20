@@ -8,19 +8,13 @@
 
 import Foundation
 
-struct Animal: Identifiable {
-    let id = UUID()
+struct Animal {
     let title: String
     let description: String
-    let image: String
+    let image: Data
     let order: Int
     let status: ProductState
     let content: [Content]
-    
-    struct Content {
-        let fact: String
-        let image: String
-    }
 }
 
 enum ProductState: String, Codable {
@@ -36,6 +30,11 @@ enum ProductState: String, Codable {
 }
 
 
+struct Content: Codable {
+    let fact: String
+    let image: String
+}
+
 struct AnimalModel: Codable {
     let title: String
     let description: String
@@ -43,10 +42,5 @@ struct AnimalModel: Codable {
     let order: Int
     let status: ProductState?
     let content: [Content]?
-    
-    struct Content: Codable {
-        let fact: String
-        let image: String
-    }
 
 }

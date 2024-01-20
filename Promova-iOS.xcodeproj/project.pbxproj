@@ -10,6 +10,7 @@
 		C502B9442B5B2F2E004A8AA4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9432B5B2F2E004A8AA4 /* Product.swift */; };
 		C502B9472B5B32C2004A8AA4 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9462B5B32C2004A8AA4 /* ProductsView.swift */; };
 		C502B9492B5B32F1004A8AA4 /* ProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9482B5B32F1004A8AA4 /* ProductCellView.swift */; };
+		C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B94B2B5BB335004A8AA4 /* UIColor+Hex.swift */; };
 		C5224B2C2B5B2340003D1451 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5224B2B2B5B2340003D1451 /* Store.swift */; };
 		C574B4322B5AB1AB007344F2 /* Promova_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B4312B5AB1AB007344F2 /* Promova_iOSApp.swift */; };
 		C574B4342B5AB1AB007344F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B4332B5AB1AB007344F2 /* ContentView.swift */; };
@@ -42,6 +43,7 @@
 		C502B9432B5B2F2E004A8AA4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		C502B9462B5B32C2004A8AA4 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		C502B9482B5B32F1004A8AA4 /* ProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellView.swift; sourceTree = "<group>"; };
+		C502B94B2B5BB335004A8AA4 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		C5224B2B2B5B2340003D1451 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		C574B42E2B5AB1AB007344F2 /* Promova-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Promova-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C574B4312B5AB1AB007344F2 /* Promova_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promova_iOSApp.swift; sourceTree = "<group>"; };
@@ -153,6 +155,14 @@
 			path = GlobalStates;
 			sourceTree = "<group>";
 		};
+		C502B94A2B5BB323004A8AA4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C502B94B2B5BB335004A8AA4 /* UIColor+Hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C5224B2A2B5B2334003D1451 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +194,7 @@
 		C574B4302B5AB1AB007344F2 /* Promova-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C502B94A2B5BB323004A8AA4 /* Extensions */,
 				C502B9452B5B2FD0004A8AA4 /* GlobalStates */,
 				C502B9412B5B2F00004A8AA4 /* Models */,
 				C502B93A2B5B2C1D004A8AA4 /* Modules */,
@@ -364,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C502B9492B5B32F1004A8AA4 /* ProductCellView.swift in Sources */,
+				C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */,
 				C574B4342B5AB1AB007344F2 /* ContentView.swift in Sources */,
 				C574B4322B5AB1AB007344F2 /* Promova_iOSApp.swift in Sources */,
 				C502B9472B5B32C2004A8AA4 /* ProductsView.swift in Sources */,
@@ -457,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -512,7 +524,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -537,7 +549,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -566,7 +578,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

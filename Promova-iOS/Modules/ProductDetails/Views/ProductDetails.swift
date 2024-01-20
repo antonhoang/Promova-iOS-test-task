@@ -23,7 +23,7 @@ struct ProductDetails: View {
             VStack {
                 Rectangle()
                     .frame(width: UIScreen.main.bounds.width, height: 0, alignment: .top)
-                    .navigationBarShadow(opacity: 0.25, x: 0, y: 4)
+                    .navigationBarShadow(opacity: 0.25, x: 0, y: 8)
                     .padding([.top], 20)
                 Spacer()
                 RoundedRectangle(cornerRadius: 10)

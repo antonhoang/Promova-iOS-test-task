@@ -13,25 +13,22 @@ struct ProductCellView: View {
     let product: Product
     
     var body: some View {
-        VStack {
-            
-            HStack(alignment: .top) {
-                productImage
-                VStack(alignment: .leading) {
-                    productTitle
-                    productDescription
-                    
-                    statusView(for: .paid)
-                        .padding([.top])
-                    
-                }
-                .padding([.top], 4)
-                Spacer()
-                statusView(for: .comingSoon)
+        
+        HStack(alignment: .top) {
+            productImage
+            VStack(alignment: .leading) {
+                productTitle
+                productDescription
+                
+                statusView(for: .paid)
+                    .padding([.top])
+                
             }
+            .padding([.top], 4)
+            Spacer()
+            statusView(for: .comingSoon)
         }
-        .opacity(product.status == .comingSoon ? 60 : 0)
-//        .background(product.status == .comingSoon ? Color.black.opacity(0.6) : Color.clear)
+        .overlay(product.status == .comingSoon ? Color.black.opacity(0.6) : Color.clear)
     }
     
     struct StatusView: View {

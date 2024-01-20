@@ -19,6 +19,7 @@ struct Product {
     enum ProductState {
         case free
         case paid
+        case comingSoon
     }
     
     struct Content {

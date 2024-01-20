@@ -11,6 +11,7 @@
 		C502B9472B5B32C2004A8AA4 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9462B5B32C2004A8AA4 /* ProductsView.swift */; };
 		C502B9492B5B32F1004A8AA4 /* ProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9482B5B32F1004A8AA4 /* ProductCellView.swift */; };
 		C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B94B2B5BB335004A8AA4 /* UIColor+Hex.swift */; };
+		C502B9502B5BBDA7004A8AA4 /* ProductMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B94F2B5BBDA7004A8AA4 /* ProductMocks.swift */; };
 		C5224B2C2B5B2340003D1451 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5224B2B2B5B2340003D1451 /* Store.swift */; };
 		C574B4322B5AB1AB007344F2 /* Promova_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B4312B5AB1AB007344F2 /* Promova_iOSApp.swift */; };
 		C574B4342B5AB1AB007344F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B4332B5AB1AB007344F2 /* ContentView.swift */; };
@@ -44,6 +45,7 @@
 		C502B9462B5B32C2004A8AA4 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		C502B9482B5B32F1004A8AA4 /* ProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellView.swift; sourceTree = "<group>"; };
 		C502B94B2B5BB335004A8AA4 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		C502B94F2B5BBDA7004A8AA4 /* ProductMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMocks.swift; sourceTree = "<group>"; };
 		C5224B2B2B5B2340003D1451 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		C574B42E2B5AB1AB007344F2 /* Promova-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Promova-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C574B4312B5AB1AB007344F2 /* Promova_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promova_iOSApp.swift; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C502B94E2B5BBD8C004A8AA4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C502B94F2B5BBDA7004A8AA4 /* ProductMocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		C5224B2A2B5B2334003D1451 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +213,7 @@
 				C574B4312B5AB1AB007344F2 /* Promova_iOSApp.swift */,
 				C574B4332B5AB1AB007344F2 /* ContentView.swift */,
 				C574B4352B5AB1B0007344F2 /* Assets.xcassets */,
+				C502B94E2B5BBD8C004A8AA4 /* Mocks */,
 				C574B4372B5AB1B0007344F2 /* Preview Content */,
 			);
 			path = "Promova-iOS";
@@ -376,6 +387,7 @@
 			files = (
 				C502B9492B5B32F1004A8AA4 /* ProductCellView.swift in Sources */,
 				C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */,
+				C502B9502B5BBDA7004A8AA4 /* ProductMocks.swift in Sources */,
 				C574B4342B5AB1AB007344F2 /* ContentView.swift in Sources */,
 				C574B4322B5AB1AB007344F2 /* Promova_iOSApp.swift in Sources */,
 				C502B9472B5B32C2004A8AA4 /* ProductsView.swift in Sources */,

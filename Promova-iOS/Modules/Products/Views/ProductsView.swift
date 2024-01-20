@@ -11,14 +11,14 @@ import SwiftUI
 struct ProductsView: View {
     var body: some View {
             List {
-                ForEach(0..<3) { index in
+                ForEach(mockProducts) { product in
                     ProductCellView(product: .init(
-                        title: "Title",
-                        description: "Description",
-                        image: "Bitmap",
-                        order: 1,
-                        status: .free,
-                        content: []))
+                        title: product.title,
+                        description: product.description,
+                        image: product.image,
+                        order: product.order,
+                        status: product.status,
+                        content: product.content))
                         .background(Color.white)
                         .listRowInsets(.init(top: 8, leading: 0, bottom: 8, trailing: 0))
                         .listRowBackground(Color.clear)

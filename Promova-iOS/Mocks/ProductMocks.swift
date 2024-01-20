@@ -8,31 +8,27 @@
 
 import Foundation
 
-class ProductMocks {
-    static let mockProducts = [
-        ProductCellView(product: .init(
-            title: "Title 1",
-            description: "Description 1",
-            image: "Bitmap",
-            order: 1,
-            status: .free,
-            content: [])
-                       ),
-        ProductCellView(product: .init(
-            title: "Title 2",
-            description: "Description 2",
-            image: "Bitmap",
-            order: 1,
-            status: .paid,
-            content: [])
-                       ),
-        ProductCellView(product: .init(
-            title: "Title 3",
-            description: "Description 3",
-            image: "Bitmap",
-            order: 1,
-            status: .comingSoon,
-            content: [])
-                       )
-    ]
-}
+
+let mockProducts: [Product] = [
+    .init(
+        title: "Title 1",
+        description: "Description 1",
+        image: "Bitmap",
+        order: 1,
+        status: .free,
+        content: []),
+    .init(
+        title: "Title 2",
+        description: "Description 2",
+        image: "Bitmap",
+        order: 1,
+        status: .paid,
+        content: []),
+    .init(
+        title: "Title 3",
+        description: "Description 3",
+        image: "Bitmap",
+        order: 1,
+        status: .comingSoon,
+        content: [])
+]

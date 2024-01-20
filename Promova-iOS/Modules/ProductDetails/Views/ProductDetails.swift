@@ -32,7 +32,7 @@ struct ProductDetails: View {
             }
 
         }
-        .navigationBarTitle("Category Title", displayMode: .inline)
+        .navigationBarTitle(animal.title, displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
             leading:
@@ -57,11 +57,19 @@ struct ProductDetails: View {
     
     private var cardContent: some View {
         VStack {
-            Image("BitmapFullSize")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            if let im = UIImage(data: animal.image) {
+                ZStack {
+                    Image(uiImage: im)
+                        .resizable()
+                        .scaledToFit()
+                        .padding(8)
+                    
+                }
+            } else {
+                Image("BitmapFullSize")
+            }
+            Text(animal.content.first?.fact ?? "")
                 .padding()
-            Text("Fact text")
             Spacer()
             HStack {
                 Button(action: {

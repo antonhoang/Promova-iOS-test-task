@@ -11,10 +11,11 @@ import SwiftUI
 struct Promova_iOSApp: App {
     var body: some Scene {
         WindowGroup {
-//            let state = State()
-//            let reducer = Reducer()
-//            let store = Store<State>(state: state, reducer: reducer)
+            let state = State()
+            let reducer = Reducer()
+            let store = Store(state: state, reducer: reducer)
             ProductsView()
+                .environmentObject(store)
         }
     }
 }

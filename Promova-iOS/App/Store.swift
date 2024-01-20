@@ -9,56 +9,39 @@
 import Foundation
 import Combine
 
-//struct State {
-//    var products: [Product] = []
-//}
-
-protocol Action { }
-typealias Reducer<State> = (State, Action) -> State
-
-struct GetAnimals: Action {
-    
+struct State {
+    var animals: [Animal]
 }
 
-class Store<State>: ObservableObject {
+enum Action {
+    case getAnimals
+}
+
+class Reducer {
+    func update(_ state: inout State, _ action: Action) {
+        switch action {
+        case .getAnimals:
+            let endpoint = AnimalEndpoint()
+            Task {
+                let result = try await NetworkAPI().asyncRequest(endPoint: endpoint, responseModel: [AnimalModel].self)
+//                state.animals = result
+            }
+            
+        }
+    }
+}
+
+class Store: ObservableObject {
+    
     @Published private(set) var state: State
-    private let reducer: Reducer<State>
-    private let network: NetworkProtocol
-    init(
-        state: State,
-        reducer: @escaping Reducer<State>,
-        network: NetworkProtocol
-    ) {
+    var reducer: Reducer
+    
+    init(state: State, reducer: Reducer) {
         self.state = state
         self.reducer = reducer
-        self.network = network
-      }
+    }
     
     func dispatch(_ action: Action) {
-        let newState = reducer(state, action)
-//        reducer.update(&state, action)
-    }
-    
-    func fetchData() {
-        let endpoint = AnimalEndpoint()
-        Task {
-            let result = try await network.asyncRequest(endPoint: endpoint, responseModel: AnimalModel.self)
-            print(result)
-        }
-        
+        reducer.update(&state, action)
     }
 }
-
-
-//enum Action {
-//    case getProducts([Product])
-//}
-
-//class Reducer {
-//    func update(_ appState: inout State, _ action: Action) {
-//        switch action {
-//        case .getProducts(let products):
-//            appState.products = products
-//        }
-//    }
-//}

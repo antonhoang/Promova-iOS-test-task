@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct ProductsView: View {
+    
+    @EnvironmentObject var store: Store
+    
     var body: some View {
         NavigationView {
             List {
@@ -35,11 +38,8 @@ struct ProductsView: View {
             .onAppear {
                 UITableView.appearance().backgroundColor = .init(hex:  0xBEC8FF)
                 
-                let endpoint = AnimalEndpoint()
-                Task {
-                    let result = try await NetworkAPI().asyncRequest(endPoint: endpoint, responseModel: [AnimalModel].self)
-                    print(result)
-                }
+                store.dispatch(.getAnimals)
+                
             }
             .navigationBarHidden(true)
         }

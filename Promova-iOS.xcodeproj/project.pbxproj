@@ -21,6 +21,7 @@
 		C574B44D2B5AB1B1007344F2 /* Promova_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B44C2B5AB1B1007344F2 /* Promova_iOSUITests.swift */; };
 		C574B44F2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B44E2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift */; };
 		C574B45E2B5ACE59007344F2 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B45D2B5ACE59007344F2 /* NetworkAPI.swift */; };
+		C57B789A2B5BD79B00F30377 /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B78992B5BD79B00F30377 /* ProductDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C574B44C2B5AB1B1007344F2 /* Promova_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promova_iOSUITests.swift; sourceTree = "<group>"; };
 		C574B44E2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promova_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C574B45D2B5ACE59007344F2 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		C57B78992B5BD79B00F30377 /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		C502B93F2B5B2C5B004A8AA4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C57B78992B5BD79B00F30377 /* ProductDetails.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 			files = (
 				C502B9492B5B32F1004A8AA4 /* ProductCellView.swift in Sources */,
 				C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */,
+				C57B789A2B5BD79B00F30377 /* ProductDetails.swift in Sources */,
 				C502B9502B5BBDA7004A8AA4 /* ProductMocks.swift in Sources */,
 				C574B4342B5AB1AB007344F2 /* ContentView.swift in Sources */,
 				C574B4322B5AB1AB007344F2 /* Promova_iOSApp.swift in Sources */,

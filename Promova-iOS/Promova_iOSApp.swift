@@ -14,7 +14,7 @@ struct Promova_iOSApp: App {
 //            let state = State()
 //            let reducer = Reducer()
 //            let store = Store<State>(state: state, reducer: reducer)
-            ContentView()
+            ProductsView()
         }
     }
 }

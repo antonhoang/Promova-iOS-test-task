@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ProductDetails: View {
-//    @EnvironmentObject private var store: Store
+
     @Environment(\.dismiss) var dismiss
     let animal: Animal
 
@@ -68,7 +68,7 @@ struct ProductDetails: View {
             } else {
                 Image("BitmapFullSize")
             }
-            Text(animal.content.first?.fact ?? "")
+            Text(animal.content[safe: 0]?.fact ?? "")
                 .padding()
             Spacer()
             HStack {

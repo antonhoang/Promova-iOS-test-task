@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ProductsView: View {
     
-    @EnvironmentObject var store: Store
+    @EnvironmentObject var store: AppStore
     
     init() {
         UITableView.appearance().backgroundColor = .init(hex:  0xBEC8FF)

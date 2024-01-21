@@ -105,19 +105,19 @@
 			isa = PBXGroup;
 			children = (
 				C57B789B2B5BE99400F30377 /* SplashScreen */,
-				C502B93B2B5B2C2D004A8AA4 /* Products */,
-				C502B93E2B5B2C53004A8AA4 /* ProductDetails */,
+				C502B93B2B5B2C2D004A8AA4 /* Animals */,
+				C502B93E2B5B2C53004A8AA4 /* AnimalsDetails */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		C502B93B2B5B2C2D004A8AA4 /* Products */ = {
+		C502B93B2B5B2C2D004A8AA4 /* Animals */ = {
 			isa = PBXGroup;
 			children = (
 				C502B93C2B5B2C3D004A8AA4 /* State */,
 				C502B93D2B5B2C45004A8AA4 /* Views */,
 			);
-			path = Products;
+			path = Animals;
 			sourceTree = "<group>";
 		};
 		C502B93C2B5B2C3D004A8AA4 /* State */ = {
@@ -136,13 +136,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C502B93E2B5B2C53004A8AA4 /* ProductDetails */ = {
+		C502B93E2B5B2C53004A8AA4 /* AnimalsDetails */ = {
 			isa = PBXGroup;
 			children = (
 				C502B9402B5B2C60004A8AA4 /* State */,
 				C502B93F2B5B2C5B004A8AA4 /* Views */,
 			);
-			path = ProductDetails;
+			path = AnimalsDetails;
 			sourceTree = "<group>";
 		};
 		C502B93F2B5B2C5B004A8AA4 /* Views */ = {

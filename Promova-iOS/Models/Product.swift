@@ -8,13 +8,39 @@
 
 import Foundation
 
-struct Animal {
+struct Animal: Identifiable {
+    let id = UUID()
     let title: String
     let description: String
     let image: Data
     let order: Int
     let status: ProductState
     let content: [Content]
+    
+    init(
+        title: String,
+        description: String,
+        image: Data,
+        order: Int,
+        status: ProductState,
+        content: [Content]
+    ) {
+        self.title = title
+        self.description = description
+        self.image = image
+        self.order = order
+        self.status = status
+        self.content = content
+    }
+    
+    init() {
+        title = ""
+        description = ""
+        image = .init()
+        order = 0
+        status = .free
+        content = []
+    }
 }
 
 enum ProductState: String, Codable {

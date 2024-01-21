@@ -35,7 +35,7 @@ struct AnimalReducer: ReducerProtocol {
                         status: $0.status ?? .comingSoon,
                         content: $0.content ?? []
                     )
-                }
+                }.sorted(by: { $0.order < $1.order })
                 Task { @MainActor in
                     store.dispatch(.animal(.setAnimals(mappedAnimals)))
                 }

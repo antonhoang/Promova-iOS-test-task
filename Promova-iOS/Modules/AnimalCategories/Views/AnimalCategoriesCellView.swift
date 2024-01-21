@@ -19,8 +19,8 @@ struct AnimalCategoriesCellView: View {
                     Image(uiImage: im)
                         .resizable()
                         .scaledToFit()
-                        .frame(maxWidth: UIScreen.main.bounds.width / 2.5,
-                               maxHeight: UIScreen.main.bounds.width / 3.5)
+                        .frame(width: UIScreen.main.bounds.width / 2.5,
+                               height: UIScreen.main.bounds.width / 3.8)
                         .background(Color.gray)
                         .padding(8)
                 }
@@ -37,6 +37,7 @@ struct AnimalCategoriesCellView: View {
             .padding([.top], 4)
             Spacer()
             statusView(for: .comingSoon)
+                .padding([.vertical])
         }
         .overlay(animal.status == .comingSoon ? Color.black.opacity(0.6) : Color.clear)
     }
@@ -51,7 +52,6 @@ struct AnimalCategoriesCellView: View {
                 Image(imageName)
                 Text(statusText)
                     .foregroundColor(Color(red: 8/255, green: 58/255, blue: 235/255))
-
             }
         }
     }
@@ -70,6 +70,7 @@ struct AnimalCategoriesCellView: View {
                     imageName: "coming-soon 1",
                     statusText: "",
                     statusColor: .clear)
+                
             default:
                 EmptyView()
             }

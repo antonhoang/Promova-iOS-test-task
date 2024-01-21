@@ -24,19 +24,6 @@ enum AppAction {
     case animal(AnimalAction)
 }
 
-struct AnimalState {
-    var animals: [Animal] = []
-}
-
-enum AnimalAction {
-    case getAnimals
-    case setAnimals([Animal])
-}
-
-enum ApplAction {
-    case animal
-}
-
 struct AppReducer {
     func reduce(_ state: inout AppState, _ action: AppAction, _ environment: EnviromentProtocol) {
         switch action {
@@ -46,36 +33,3 @@ struct AppReducer {
     }
 }
 
-struct AnimalReducer: ReducerProtocol {
-    func reduce(_ state: inout AnimalState, _ action: AnimalAction, _ environment: EnviromentProtocol) {
-        switch action {
-        case .getAnimals:
-            let endpoint = AnimalEndpoint()
-            Task {
-                let animals = try await environment.network.asyncRequest(endPoint: endpoint, responseModel: [AnimalModel].self)
-                var imagesData: [Data] = []
-                for animal in animals {
-                    if let url = URL(string: animal.image) {
-                        let imageData = try await environment.network.asyncLoadImage(url: url)
-                        imagesData.append(imageData)
-                    }
-                }
-                let mappedAnimals = zip(animals, imagesData).map {
-                    Animal(
-                        title: $0.title,
-                        description: $0.description,
-                        image: $1,
-                        order: $0.order,
-                        status: $0.status ?? .comingSoon,
-                        content: $0.content ?? []
-                    )
-                }
-                Task { @MainActor in
-                    store.dispatch(.animal(.setAnimals(mappedAnimals)))
-                }
-            }
-        case .setAnimals(let array):
-            state.animals = array
-        }
-    }
-}

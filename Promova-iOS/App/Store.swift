@@ -10,17 +10,6 @@ import Foundation
 import Combine
 import SwiftUI
 
-//struct AppState {
-//    var animals: [Animal] = []
-//}
-//
-//enum AppAction {
-//    case getAnimals
-//    case setAnimals([Animal])
-//}
-
-typealias Middleware<State, Action> = (State, Action) -> ()
-
 class Store: ObservableObject {
     
     @Published private(set) var state: AppState

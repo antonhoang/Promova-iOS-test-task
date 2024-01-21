@@ -23,7 +23,6 @@ struct ProductCellView: View {
                                maxHeight: UIScreen.main.bounds.width / 3.5)
                         .background(Color.gray)
                         .padding(8)
-                    
                 }
             } else {
                 Image("Bitmap")

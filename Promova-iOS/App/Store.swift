@@ -9,8 +9,6 @@
 import Foundation
 import Combine
 
-let store = Store(state: State(animals: []), reducer: Reducer())
-
 struct State {
     var animals: [Animal]
 }
@@ -21,31 +19,26 @@ enum Action {
 }
 
 class Reducer {
-    func update(_ state: inout State, _ action: Action) -> State {
+    func update(_ state: inout State, _ action: Action, _ enviroment: EnviromentProtocol) -> State {
         switch action {
         case .getAnimals:
-            let endpoint = AnimalEndpoint()
             Task {
-                let result = try await NetworkAPI().asyncRequest(endPoint: endpoint, responseModel: [AnimalModel].self)
-                var imagesResult: [Data] = []
-                for res in result {
-                    do {
-                        if let url = URL(string: res.image) {
-                            let imageData = try await NetworkAPI().asyncLoadImage(url: url)
-                            imagesResult.append(imageData)
-                        }
-                    }
+                let animals = try await fetchAnimals(enviroment: enviroment)
+                let images = try await fetchImages(for: animals, in: enviroment)
+                
+                let mappedAnimals = zip(animals, images).map {
+                    Animal(
+                        title: $0.title,
+                        description: $0.description,
+                        image: $1,
+                        order: $0.order,
+                        status: $0.status ?? .comingSoon,
+                        content: $0.content ?? []
+                    )
                 }
-                let animals = zip(result, imagesResult).map {
-                    Animal(title: $0.0.title,
-                           description: $0.0.description,
-                           image: $0.1,
-                           order: $0.0.order,
-                           status: $0.0.status ?? .comingSoon,
-                           content: $0.0.content ?? [])
-                }
-                DispatchQueue.main.async {
-                    store.dispatch(.setAnimals(animals))                    
+                
+                Task { @MainActor in
+                    store.dispatch(.setAnimals(mappedAnimals))
                 }
             }
         case .setAnimals(let animals):
@@ -54,19 +47,56 @@ class Reducer {
         }
         return state
     }
+    
+    func fetchAnimals(enviroment: EnviromentProtocol) async throws -> [AnimalModel] {
+         let endpoint = AnimalEndpoint()
+         return try await enviroment.network.asyncRequest(endPoint: endpoint, responseModel: [AnimalModel].self)
+     }
+    
+    func fetchImages(for animals: [AnimalModel], in enviroment: EnviromentProtocol) async throws -> [Data] {
+         return try await withThrowingTaskGroup(of: Data.self) { group -> [Data] in
+             for animal in animals {
+                 group.addTask {
+                     if let url = URL(string: animal.image) {
+                         return try await enviroment.network.asyncLoadImage(url: url)
+                     } else {
+                         return .init()
+                     }
+                 }
+             }
+             return try await group.reduce(into: []) { $0.append($1) }
+         }
+     }
 }
 
 class Store: ObservableObject {
     
     @Published private(set) var state: State
     var reducer: Reducer
+    let enviroment: EnviromentProtocol
     
-    init(state: State, reducer: Reducer) {
+    init(
+        state: State,
+        reducer: Reducer,
+        enviroment: EnviromentProtocol
+    ) {
         self.state = state
         self.reducer = reducer
+        self.enviroment = enviroment
     }
     
     func dispatch(_ action: Action) {
-        state = reducer.update(&state, action)
+        state = reducer.update(&state, action, enviroment)
+    }
+}
+
+protocol EnviromentProtocol {
+    var network: NetworkProtocol { get }
+}
+
+class Enviroment: EnviromentProtocol {
+    let network: NetworkProtocol
+    init(network: NetworkProtocol) {
+        self.network = network
     }
 }

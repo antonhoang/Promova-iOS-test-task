@@ -41,6 +41,7 @@ struct ProductsView: View {
             }
             .onAppear {
                 guard store.state.animals.isEmpty else {
+                    // Show loader
                     return
                 }
                 store.dispatch(.getAnimals)

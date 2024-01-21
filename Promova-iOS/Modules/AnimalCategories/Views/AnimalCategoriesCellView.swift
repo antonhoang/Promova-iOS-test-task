@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ProductCellView: View {
+struct AnimalCategoriesCellView: View {
     
     let animal: Animal
     
@@ -30,10 +30,9 @@ struct ProductCellView: View {
             VStack(alignment: .leading) {
                 animalTitle
                 animalDescription
-                
+                Spacer()
                 statusView(for: .paid)
-                    .padding([.top])
-                
+                    .padding([.bottom], 8)
             }
             .padding([.top], 4)
             Spacer()
@@ -83,23 +82,25 @@ struct ProductCellView: View {
         Text(animal.title)
             .font(.headline)
             .foregroundColor(.black)
+            .lineLimit(1)
     }
     
     private var animalDescription: some View {
         Text(animal.description)
             .font(.subheadline)
             .foregroundColor(.gray)
+            .lineLimit(2)
     }
 }
 
 struct ProductCellView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductCellView(animal: .init(
+        AnimalCategoriesCellView(animal: .init(
             title: "Title",
             description: "Description",
             image: Data(),
             order: 1,
-            status: .comingSoon,
+            status: .paid,
             content: [])
         )
     }

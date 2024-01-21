@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ProductDetails: View {
+struct FactsView: View {
 
     @Environment(\.dismiss) var dismiss
     let animal: Animal
@@ -94,7 +94,7 @@ struct ProductDetails: View {
 struct ProductDetails_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ProductDetails(animal: mockProducts.first!)
+            FactsView(animal: mockProducts.first!)
         }
     }
 }

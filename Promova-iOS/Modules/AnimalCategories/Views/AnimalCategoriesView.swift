@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ProductsView: View {
+struct AnimalCategoriesView: View {
     
     @EnvironmentObject var store: Store
     
@@ -21,7 +21,7 @@ struct ProductsView: View {
             List {
                 ForEach(store.state.animalState.animals, id: \.title) { animal in
                     ZStack {
-                        ProductCellView(animal: .init(
+                        AnimalCategoriesCellView(animal: .init(
                             title: animal.title,
                             description: animal.description,
                             image: animal.image,
@@ -29,7 +29,7 @@ struct ProductsView: View {
                             status: animal.status,
                             content: animal.content)
                         )
-                        NavigationLink(destination: ProductDetails(animal: animal), label: { EmptyView() } )
+                        NavigationLink(destination: FactsView(animal: animal), label: { EmptyView() } )
                     }
                 }
                 .background(Color.white)
@@ -41,7 +41,6 @@ struct ProductsView: View {
             }
             .onAppear {
                 guard store.state.animalState.animals.isEmpty else {
-                    // Show loader
                     return
                 }
                 store.dispatch(.animal(.getAnimals))
@@ -55,7 +54,7 @@ struct ProductsView: View {
 
 struct ProductsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductsView()
+        AnimalCategoriesView()
     }
 }
 

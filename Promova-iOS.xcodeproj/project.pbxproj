@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C502B9442B5B2F2E004A8AA4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9432B5B2F2E004A8AA4 /* Product.swift */; };
-		C502B9472B5B32C2004A8AA4 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9462B5B32C2004A8AA4 /* ProductsView.swift */; };
-		C502B9492B5B32F1004A8AA4 /* ProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9482B5B32F1004A8AA4 /* ProductCellView.swift */; };
+		C502B9472B5B32C2004A8AA4 /* AnimalCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9462B5B32C2004A8AA4 /* AnimalCategoriesView.swift */; };
+		C502B9492B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9482B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift */; };
 		C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B94B2B5BB335004A8AA4 /* UIColor+Hex.swift */; };
 		C502B9502B5BBDA7004A8AA4 /* ProductMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B94F2B5BBDA7004A8AA4 /* ProductMocks.swift */; };
 		C5224B2C2B5B2340003D1451 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5224B2B2B5B2340003D1451 /* Store.swift */; };
@@ -27,7 +27,7 @@
 		C574B44D2B5AB1B1007344F2 /* Promova_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B44C2B5AB1B1007344F2 /* Promova_iOSUITests.swift */; };
 		C574B44F2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B44E2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift */; };
 		C574B45E2B5ACE59007344F2 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B45D2B5ACE59007344F2 /* NetworkAPI.swift */; };
-		C57B789A2B5BD79B00F30377 /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B78992B5BD79B00F30377 /* ProductDetails.swift */; };
+		C57B789A2B5BD79B00F30377 /* FactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B78992B5BD79B00F30377 /* FactsView.swift */; };
 		C57B789D2B5C2C3C00F30377 /* View+NavigationShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B789C2B5C2C3C00F30377 /* View+NavigationShadow.swift */; };
 		C57B789F2B5C31B200F30377 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B789E2B5C31B200F30377 /* RequestMethod.swift */; };
 		C57B78A12B5C31EA00F30377 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57B78A02B5C31EA00F30377 /* ApiError.swift */; };
@@ -53,8 +53,8 @@
 
 /* Begin PBXFileReference section */
 		C502B9432B5B2F2E004A8AA4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		C502B9462B5B32C2004A8AA4 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
-		C502B9482B5B32F1004A8AA4 /* ProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellView.swift; sourceTree = "<group>"; };
+		C502B9462B5B32C2004A8AA4 /* AnimalCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategoriesView.swift; sourceTree = "<group>"; };
+		C502B9482B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategoriesCellView.swift; sourceTree = "<group>"; };
 		C502B94B2B5BB335004A8AA4 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		C502B94F2B5BBDA7004A8AA4 /* ProductMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMocks.swift; sourceTree = "<group>"; };
 		C5224B2B2B5B2340003D1451 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		C574B44C2B5AB1B1007344F2 /* Promova_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promova_iOSUITests.swift; sourceTree = "<group>"; };
 		C574B44E2B5AB1B1007344F2 /* Promova_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promova_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C574B45D2B5ACE59007344F2 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
-		C57B78992B5BD79B00F30377 /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
+		C57B78992B5BD79B00F30377 /* FactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsView.swift; sourceTree = "<group>"; };
 		C57B789C2B5C2C3C00F30377 /* View+NavigationShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationShadow.swift"; sourceTree = "<group>"; };
 		C57B789E2B5C31B200F30377 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		C57B78A02B5C31EA00F30377 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -111,19 +111,19 @@
 			isa = PBXGroup;
 			children = (
 				C57B789B2B5BE99400F30377 /* SplashScreen */,
-				C502B93B2B5B2C2D004A8AA4 /* Animals */,
-				C502B93E2B5B2C53004A8AA4 /* AnimalsDetails */,
+				C502B93B2B5B2C2D004A8AA4 /* AnimalCategories */,
+				C502B93E2B5B2C53004A8AA4 /* Facts */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		C502B93B2B5B2C2D004A8AA4 /* Animals */ = {
+		C502B93B2B5B2C2D004A8AA4 /* AnimalCategories */ = {
 			isa = PBXGroup;
 			children = (
 				C502B93C2B5B2C3D004A8AA4 /* State */,
 				C502B93D2B5B2C45004A8AA4 /* Views */,
 			);
-			path = Animals;
+			path = AnimalCategories;
 			sourceTree = "<group>";
 		};
 		C502B93C2B5B2C3D004A8AA4 /* State */ = {
@@ -139,25 +139,25 @@
 		C502B93D2B5B2C45004A8AA4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C502B9462B5B32C2004A8AA4 /* ProductsView.swift */,
-				C502B9482B5B32F1004A8AA4 /* ProductCellView.swift */,
+				C502B9462B5B32C2004A8AA4 /* AnimalCategoriesView.swift */,
+				C502B9482B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C502B93E2B5B2C53004A8AA4 /* AnimalsDetails */ = {
+		C502B93E2B5B2C53004A8AA4 /* Facts */ = {
 			isa = PBXGroup;
 			children = (
 				C502B9402B5B2C60004A8AA4 /* State */,
 				C502B93F2B5B2C5B004A8AA4 /* Views */,
 			);
-			path = AnimalsDetails;
+			path = Facts;
 			sourceTree = "<group>";
 		};
 		C502B93F2B5B2C5B004A8AA4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C57B78992B5BD79B00F30377 /* ProductDetails.swift */,
+				C57B78992B5BD79B00F30377 /* FactsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -442,19 +442,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C502B9492B5B32F1004A8AA4 /* ProductCellView.swift in Sources */,
+				C502B9492B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift in Sources */,
 				C5611D0D2B5DAC5F00A7E6CE /* AnimalState.swift in Sources */,
 				C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */,
 				C5611D062B5D809C00A7E6CE /* Reducer.swift in Sources */,
 				C5611D042B5D807D00A7E6CE /* Enviroment.swift in Sources */,
-				C57B789A2B5BD79B00F30377 /* ProductDetails.swift in Sources */,
+				C57B789A2B5BD79B00F30377 /* FactsView.swift in Sources */,
 				C5611D112B5DAC9500A7E6CE /* AnimalReducer.swift in Sources */,
 				C57B78A32B5C31FC00F30377 /* EndpointProvider.swift in Sources */,
 				C502B9502B5BBDA7004A8AA4 /* ProductMocks.swift in Sources */,
 				C57B789F2B5C31B200F30377 /* RequestMethod.swift in Sources */,
 				C574B4342B5AB1AB007344F2 /* ContentView.swift in Sources */,
 				C574B4322B5AB1AB007344F2 /* Promova_iOSApp.swift in Sources */,
-				C502B9472B5B32C2004A8AA4 /* ProductsView.swift in Sources */,
+				C502B9472B5B32C2004A8AA4 /* AnimalCategoriesView.swift in Sources */,
 				C502B9442B5B2F2E004A8AA4 /* Product.swift in Sources */,
 				C57B789D2B5C2C3C00F30377 /* View+NavigationShadow.swift in Sources */,
 				C5611D0B2B5D8CB200A7E6CE /* Collections+Index.swift in Sources */,

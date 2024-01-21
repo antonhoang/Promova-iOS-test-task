@@ -9,7 +9,11 @@
 import Foundation
 
 struct AnimalReducer: ReducerProtocol {
-    func reduce(_ state: inout AnimalState, _ action: AnimalAction, _ environment: EnviromentProtocol) {
+    func reduce(
+        _ state: inout AnimalState,
+        _ action: AnimalAction,
+        _ environment: EnviromentProtocol
+    ) {
         switch action {
         case .getAnimals:
             let endpoint = AnimalEndpoint()

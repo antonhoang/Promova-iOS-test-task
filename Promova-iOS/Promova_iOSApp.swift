@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 let store = StoreFactory().makeStore()
 
 protocol StoreFactoryProtocol {
@@ -28,7 +26,7 @@ class StoreFactory: StoreFactoryProtocol {
 struct Promova_iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ProductsView()
+            AnimalCategoriesView()
                 .environmentObject(store)
         }
     }

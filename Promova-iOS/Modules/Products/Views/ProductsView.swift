@@ -12,6 +12,10 @@ struct ProductsView: View {
     
     @EnvironmentObject var store: Store
     
+    init() {
+        UITableView.appearance().backgroundColor = .init(hex:  0xBEC8FF)
+    }
+    
     var body: some View {
         NavigationView {
             List {
@@ -36,10 +40,10 @@ struct ProductsView: View {
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
             }
             .onAppear {
-                UITableView.appearance().backgroundColor = .init(hex:  0xBEC8FF)
-                
+                guard store.state.animals.isEmpty else {
+                    return
+                }
                 store.dispatch(.getAnimals)
-                
             }
             .navigationBarHidden(true)
         }

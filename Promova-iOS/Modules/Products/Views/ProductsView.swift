@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ProductsView: View {
     
-    @EnvironmentObject var store: AppStore
+    @EnvironmentObject var store: Store
     
     init() {
         UITableView.appearance().backgroundColor = .init(hex:  0xBEC8FF)
@@ -19,7 +19,7 @@ struct ProductsView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(store.state.animals, id: \.title) { animal in
+                ForEach(store.state.animalState.animals, id: \.title) { animal in
                     ZStack {
                         ProductCellView(animal: .init(
                             title: animal.title,
@@ -40,11 +40,11 @@ struct ProductsView: View {
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
             }
             .onAppear {
-                guard store.state.animals.isEmpty else {
+                guard store.state.animalState.animals.isEmpty else {
                     // Show loader
                     return
                 }
-                store.dispatch(.getAnimals)
+                store.dispatch(.animal(.getAnimals))
             }
             .navigationBarHidden(true)
         }

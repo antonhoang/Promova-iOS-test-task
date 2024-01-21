@@ -10,26 +10,26 @@ import Foundation
 import Combine
 import SwiftUI
 
-struct AppState {
-    var animals: [Animal] = []
-}
-
-enum AppAction {
-    case getAnimals
-    case setAnimals([Animal])
-}
+//struct AppState {
+//    var animals: [Animal] = []
+//}
+//
+//enum AppAction {
+//    case getAnimals
+//    case setAnimals([Animal])
+//}
 
 typealias Middleware<State, Action> = (State, Action) -> ()
 
-class Store<State, Action, Enviroment>: ObservableObject {
+class Store: ObservableObject {
     
-    @Published private(set) var state: State
-    private let reducer: Reducer<State, Action, Enviroment>
+    @Published private(set) var state: AppState
+    private let reducer: AppReducer
     private let enviroment: Enviroment
     
     init(
-        state: State,
-        reducer: Reducer<State, Action, Enviroment>,
+        state: AppState,
+        reducer: AppReducer,
         enviroment: Enviroment
     ) {
         self.state = state
@@ -37,7 +37,7 @@ class Store<State, Action, Enviroment>: ObservableObject {
         self.enviroment = enviroment
     }
     
-    func dispatch(_ action: Action) {
+    func dispatch(_ action: AppAction) {
         reducer.reduce(&state, action, enviroment)
     }
 }

@@ -15,7 +15,6 @@
 		C5224B2C2B5B2340003D1451 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5224B2B2B5B2340003D1451 /* Store.swift */; };
 		C5611D042B5D807D00A7E6CE /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5611D032B5D807D00A7E6CE /* Enviroment.swift */; };
 		C5611D062B5D809C00A7E6CE /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5611D052B5D809C00A7E6CE /* Reducer.swift */; };
-		C5611D092B5D80D700A7E6CE /* FetchAnimalMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5611D082B5D80D700A7E6CE /* FetchAnimalMiddleware.swift */; };
 		C5611D0B2B5D8CB200A7E6CE /* Collections+Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5611D0A2B5D8CB200A7E6CE /* Collections+Index.swift */; };
 		C574B4322B5AB1AB007344F2 /* Promova_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B4312B5AB1AB007344F2 /* Promova_iOSApp.swift */; };
 		C574B4342B5AB1AB007344F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574B4332B5AB1AB007344F2 /* ContentView.swift */; };
@@ -58,7 +57,6 @@
 		C5224B2B2B5B2340003D1451 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		C5611D032B5D807D00A7E6CE /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		C5611D052B5D809C00A7E6CE /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
-		C5611D082B5D80D700A7E6CE /* FetchAnimalMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAnimalMiddleware.swift; sourceTree = "<group>"; };
 		C5611D0A2B5D8CB200A7E6CE /* Collections+Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collections+Index.swift"; sourceTree = "<group>"; };
 		C574B42E2B5AB1AB007344F2 /* Promova-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Promova-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C574B4312B5AB1AB007344F2 /* Promova_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promova_iOSApp.swift; sourceTree = "<group>"; };
@@ -205,14 +203,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		C5611D072B5D80C800A7E6CE /* Middlewares */ = {
-			isa = PBXGroup;
-			children = (
-				C5611D082B5D80D700A7E6CE /* FetchAnimalMiddleware.swift */,
-			);
-			path = Middlewares;
-			sourceTree = "<group>";
-		};
 		C574B4252B5AB1AA007344F2 = {
 			isa = PBXGroup;
 			children = (
@@ -236,7 +226,6 @@
 		C574B4302B5AB1AB007344F2 /* Promova-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C5611D072B5D80C800A7E6CE /* Middlewares */,
 				C57B78A52B5C37AD00F30377 /* Repository */,
 				C502B94A2B5BB323004A8AA4 /* Extensions */,
 				C502B9452B5B2FD0004A8AA4 /* GlobalStates */,
@@ -445,7 +434,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C502B9492B5B32F1004A8AA4 /* ProductCellView.swift in Sources */,
-				C5611D092B5D80D700A7E6CE /* FetchAnimalMiddleware.swift in Sources */,
 				C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */,
 				C5611D062B5D809C00A7E6CE /* Reducer.swift in Sources */,
 				C5611D042B5D807D00A7E6CE /* Enviroment.swift in Sources */,

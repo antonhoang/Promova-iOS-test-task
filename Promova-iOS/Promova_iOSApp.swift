@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-typealias AppStore = Store<AppState, AppAction, Enviroment>
+
 
 let store = StoreFactory().makeStore()
 
 protocol StoreFactoryProtocol {
-    func makeStore() -> AppStore
+    func makeStore() -> Store
 }
 
 class StoreFactory: StoreFactoryProtocol {
-    func makeStore() -> AppStore {
-        let state = AppState()
+    func makeStore() -> Store {
+        let state = AppState(animalState: .init())
         let network = NetworkAPI()
         let enviroment = Enviroment(network: network)
-        return Store(state: state, reducer: appReducer, enviroment: enviroment)
+        return Store(state: state, reducer: AppReducer(), enviroment: enviroment)
     }
 }
 

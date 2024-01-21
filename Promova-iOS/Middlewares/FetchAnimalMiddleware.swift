@@ -16,7 +16,7 @@ class FetchAnimalMiddleware {
     }
     
     func middleware() -> Middleware<AppState, AppAction> {
-        return { [self] state, action in
+        return { state, action in
             switch action {
             case .getAnimals:
                 let endpoint = AnimalEndpoint()

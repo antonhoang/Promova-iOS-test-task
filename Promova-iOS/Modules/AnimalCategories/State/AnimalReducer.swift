@@ -9,6 +9,7 @@
 import Foundation
 
 struct AnimalReducer: ReducerProtocol {
+
     func reduce(
         _ state: inout AnimalState,
         _ action: AnimalAction,
@@ -26,6 +27,7 @@ struct AnimalReducer: ReducerProtocol {
                         imagesData.append(imageData)
                     }
                 }
+                
                 let mappedAnimals = zip(animals, imagesData).map {
                     Animal(
                         title: $0.title,
@@ -36,6 +38,7 @@ struct AnimalReducer: ReducerProtocol {
                         content: $0.content ?? []
                     )
                 }.sorted(by: { $0.order < $1.order })
+                                
                 Task { @MainActor in
                     store.dispatch(.animal(.setAnimals(mappedAnimals)))
                 }

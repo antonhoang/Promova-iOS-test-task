@@ -12,6 +12,8 @@
 		C502B9492B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9482B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift */; };
 		C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B94B2B5BB335004A8AA4 /* UIColor+Hex.swift */; };
 		C502B9502B5BBDA7004A8AA4 /* ProductMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B94F2B5BBDA7004A8AA4 /* ProductMocks.swift */; };
+		C50FA7C32B5ED0D000DCFAC3 /* AsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FA7C22B5ED0D000DCFAC3 /* AsyncImageLoader.swift */; };
+		C50FA7C52B5ED11F00DCFAC3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FA7C42B5ED11F00DCFAC3 /* LoadingView.swift */; };
 		C5224B2C2B5B2340003D1451 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5224B2B2B5B2340003D1451 /* Store.swift */; };
 		C5611D042B5D807D00A7E6CE /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5611D032B5D807D00A7E6CE /* Enviroment.swift */; };
 		C5611D062B5D809C00A7E6CE /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5611D052B5D809C00A7E6CE /* Reducer.swift */; };
@@ -57,6 +59,8 @@
 		C502B9482B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategoriesCellView.swift; sourceTree = "<group>"; };
 		C502B94B2B5BB335004A8AA4 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		C502B94F2B5BBDA7004A8AA4 /* ProductMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMocks.swift; sourceTree = "<group>"; };
+		C50FA7C22B5ED0D000DCFAC3 /* AsyncImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageLoader.swift; sourceTree = "<group>"; };
+		C50FA7C42B5ED11F00DCFAC3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C5224B2B2B5B2340003D1451 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		C5611D032B5D807D00A7E6CE /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		C5611D052B5D809C00A7E6CE /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
@@ -202,6 +206,23 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		C50FA7C12B5ED0A500DCFAC3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C50FA7C62B5ED16F00DCFAC3 /* Reusable */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C50FA7C62B5ED16F00DCFAC3 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				C50FA7C22B5ED0D000DCFAC3 /* AsyncImageLoader.swift */,
+				C50FA7C42B5ED11F00DCFAC3 /* LoadingView.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
 		C5224B2A2B5B2334003D1451 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +256,7 @@
 		C574B4302B5AB1AB007344F2 /* Promova-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C50FA7C12B5ED0A500DCFAC3 /* Views */,
 				C57B78A52B5C37AD00F30377 /* Repository */,
 				C502B94A2B5BB323004A8AA4 /* Extensions */,
 				C502B9452B5B2FD0004A8AA4 /* GlobalStates */,
@@ -445,9 +467,11 @@
 				C502B9492B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift in Sources */,
 				C5611D0D2B5DAC5F00A7E6CE /* AnimalState.swift in Sources */,
 				C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */,
+				C50FA7C52B5ED11F00DCFAC3 /* LoadingView.swift in Sources */,
 				C5611D062B5D809C00A7E6CE /* Reducer.swift in Sources */,
 				C5611D042B5D807D00A7E6CE /* Enviroment.swift in Sources */,
 				C57B789A2B5BD79B00F30377 /* FactsView.swift in Sources */,
+				C50FA7C32B5ED0D000DCFAC3 /* AsyncImageLoader.swift in Sources */,
 				C5611D112B5DAC9500A7E6CE /* AnimalReducer.swift in Sources */,
 				C57B78A32B5C31FC00F30377 /* EndpointProvider.swift in Sources */,
 				C502B9502B5BBDA7004A8AA4 /* ProductMocks.swift in Sources */,

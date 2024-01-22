@@ -14,19 +14,14 @@ struct AnimalCategoriesCellView: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            if let im = UIImage(data: animal.image) {
-                ZStack {
-                    Image(uiImage: im)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: UIScreen.main.bounds.width / 2.5,
-                               height: UIScreen.main.bounds.width / 3.8)
-                        .background(Color.gray)
-                        .padding(8)
-                }
-            } else {
-                Image("Bitmap")
+            ZStack {
+                AsyncImageLoader(id: animal.id, imageData: animal.image)
+                    .frame(width: UIScreen.main.bounds.width / 2.5,
+                           height: UIScreen.main.bounds.width / 3.8)
+                    .background(Color.gray)
+                    .padding(8)
             }
+            
             VStack(alignment: .leading) {
                 animalTitle
                 animalDescription
@@ -106,3 +101,4 @@ struct ProductCellView_Previews: PreviewProvider {
         )
     }
 }
+

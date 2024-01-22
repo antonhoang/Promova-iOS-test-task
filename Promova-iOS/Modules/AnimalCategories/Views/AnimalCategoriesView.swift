@@ -25,16 +25,10 @@ struct AnimalCategoriesView: View {
             ZStack {
                 LoadingView(isShowing: $showAd) {
                     List {
+                        
                         ForEach(store.state.animalState.animals, id: \.id) { animal in
                             ZStack {
-                                AnimalCategoriesCellView(animal: .init(
-                                    title: animal.title,
-                                    description: animal.description,
-                                    image: animal.image,
-                                    order: animal.order,
-                                    status: animal.status,
-                                    content: animal.content)
-                                )
+                                AnimalCategoriesCellView(animal: animal)
                             }
                             .onTapGesture {
                                 showAlert = animal.status != .free
@@ -42,7 +36,6 @@ struct AnimalCategoriesView: View {
                                 selectedItem = animal
                             }
                         }
-                        .background(NavigationLink(destination: FactsView(animal: selectedItem ?? .init()), isActive: $showFacts, label: { EmptyView() }))
                         .background(Color.white)
                         .listRowInsets(.init(top: 8, leading: 0, bottom: 8, trailing: 0))
                         .listRowBackground(Color.clear)
@@ -50,6 +43,7 @@ struct AnimalCategoriesView: View {
                         .cornerRadius(8)
                         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                     }
+                    .background(NavigationLink(destination: FactsView(animal: selectedItem ?? .init()), isActive: $showFacts, label: { EmptyView() }))
                     .alert(isPresented: $showAlert) {
                         let emptyAlert = Alert(title: Text(""), dismissButton: .cancel())
                         if let selectedItem = selectedItem {
@@ -88,27 +82,6 @@ struct AnimalCategoriesView: View {
     }
 }
 
-struct LoadingView<Content>: View where Content: View {
-    
-    @Binding var isShowing: Bool
-    var content: () -> Content
-    
-    var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                
-                self.content()
-                    .disabled(self.isShowing)
-                    .blur(radius: self.isShowing ? 3 : 0)
-                
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .opacity(isShowing ? 1 : 0)
-            }
-        }
-    }
-    
-}
 
 
 

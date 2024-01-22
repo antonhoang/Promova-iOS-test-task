@@ -15,7 +15,9 @@ protocol EnviromentProtocol {
 class Enviroment: EnviromentProtocol {
     let network: NetworkProtocol
     
-    init(network: NetworkProtocol) {
+    init(
+        network: NetworkProtocol
+    ) {
         self.network = network
     }
 }

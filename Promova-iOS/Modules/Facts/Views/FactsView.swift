@@ -12,7 +12,8 @@ import Combine
 struct FactsView: View {
 
     @Environment(\.dismiss) var dismiss
-    @State var selection = 0
+    @State private var currentIndex: Int = 0
+
     let animal: Animal
 
     init(animal: Animal) {
@@ -26,16 +27,16 @@ struct FactsView: View {
                 Rectangle()
                     .frame(width: UIScreen.main.bounds.width, height: 0, alignment: .top)
                     .navigationBarShadow(opacity: 0.25, x: 0, y: 8)
-                    .padding([.top], 20)
+                    .padding([.vertical], 20)
                 Spacer()
                 
                 TabView {
                     ZStack {
                         Color(UIColor(hex: 0xBEC8FF))
-                        SwipeCardView(animal: animal)
+                            .ignoresSafeArea()
+                        SwipeCardView(currentIndex: $currentIndex, animal: animal)
                     }
                 }
-                .tabViewStyle(.page)
                 Spacer()
             }
 
@@ -50,6 +51,20 @@ struct FactsView: View {
                     }) {
                         Image("Path")
                     }
+                },
+            trailing:
+                Button(action: {
+                    let shareContent = animal.content[currentIndex].fact
+                    let activityViewController = UIActivityViewController(activityItems: [shareContent], applicationActivities: nil)
+                    if let windowScene = UIApplication.shared.connectedScenes
+                        .filter({ $0.activationState == .foregroundActive })
+                        .first as? UIWindowScene,
+                        let window = windowScene.windows.first {
+                        window.rootViewController?.present(activityViewController, animated: true, completion: nil)
+                    }
+                }) {
+                    Image(systemName: "square.and.arrow.up")
+                        .foregroundColor(.black)
                 })
     }
 }
@@ -57,13 +72,13 @@ struct FactsView: View {
 struct ProductDetails_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            SwipeCardView(animal: .init())
+            SwipeCardView(currentIndex: .constant(0), animal: .init())
         }
     }
 }
 
 struct SwipeCardView: View {
-    @State private var currentIndex: Int = 0
+    @Binding var currentIndex: Int
 
     let animal: Animal
 
@@ -100,6 +115,8 @@ struct CardView: View {
     let content: Content
     @Binding var currentIndex: Int
     let totalCards: Int
+    
+    @State var isImageLoaded = false
 
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
@@ -119,9 +136,23 @@ struct CardView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .background(Color.gray)
+                                .opacity(isImageLoaded ? 1 : 0)
                                 .padding(8)
+                                .onAppear {
+                                    withAnimation(.easeInOut(duration: 1.5)) {
+                                        isImageLoaded = true
+                                    }
+                                }
                         case .empty:
-                            ProgressView()
+                            ZStack {
+                                Image("placeholder")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .background(Color.gray)
+                                    .padding(8)
+                                    .opacity(isImageLoaded ? 0 : 1)
+                                ProgressView()
+                            }
                         default:
                             EmptyView()
                         }
@@ -153,7 +184,12 @@ struct CardView: View {
     }
 }
 
+struct ActivityView: UIViewControllerRepresentable {
+    let text: String
 
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ActivityView>) -> UIActivityViewController {
+        return UIActivityViewController(activityItems: [text], applicationActivities: nil)
+    }
 
-
-
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: UIViewControllerRepresentableContext<ActivityView>) {}
+}

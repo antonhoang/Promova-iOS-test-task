@@ -12,7 +12,7 @@ struct Animal: Identifiable {
     let id = UUID()
     let title: String
     let description: String
-    let image: Data
+    let imageURL: String
     let order: Int
     let status: ProductState
     let content: [Content]
@@ -20,14 +20,14 @@ struct Animal: Identifiable {
     init(
         title: String,
         description: String,
-        image: Data,
+        imageURL: String,
         order: Int,
         status: ProductState,
         content: [Content]
     ) {
         self.title = title
         self.description = description
-        self.image = image
+        self.imageURL = imageURL
         self.order = order
         self.status = status
         self.content = content
@@ -36,7 +36,7 @@ struct Animal: Identifiable {
     init() {
         title = ""
         description = ""
-        image = .init()
+        imageURL = ""
         order = 0
         status = .free
         content = []

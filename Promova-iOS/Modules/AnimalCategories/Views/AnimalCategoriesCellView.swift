@@ -14,13 +14,23 @@ struct AnimalCategoriesCellView: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            ZStack {
-                AsyncImageLoader(id: animal.id, imageData: animal.image)
-                    .frame(width: UIScreen.main.bounds.width / 2.5,
-                           height: UIScreen.main.bounds.width / 3.8)
-                    .background(Color.gray)
-                    .padding(8)
+            AsyncImage(url: URL(string: animal.imageURL)) { phase in
+                switch phase {
+                case .success(let image):
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: UIScreen.main.bounds.width / 2.5,
+                               height: UIScreen.main.bounds.width / 3.8)
+                        .background(Color.gray)
+                        .padding(8)
+                case .empty:
+                    ProgressView()
+                default:
+                    EmptyView()
+                }
             }
+            
             
             VStack(alignment: .leading) {
                 animalTitle
@@ -94,7 +104,7 @@ struct ProductCellView_Previews: PreviewProvider {
         AnimalCategoriesCellView(animal: .init(
             title: "Title",
             description: "Description",
-            image: Data(),
+            imageURL: "",
             order: 1,
             status: .paid,
             content: [])

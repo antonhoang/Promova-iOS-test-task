@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C502B9442B5B2F2E004A8AA4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9432B5B2F2E004A8AA4 /* Product.swift */; };
+		C502B9442B5B2F2E004A8AA4 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9432B5B2F2E004A8AA4 /* Animal.swift */; };
 		C502B9472B5B32C2004A8AA4 /* AnimalCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9462B5B32C2004A8AA4 /* AnimalCategoriesView.swift */; };
 		C502B9492B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B9482B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift */; };
 		C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B94B2B5BB335004A8AA4 /* UIColor+Hex.swift */; };
 		C502B9502B5BBDA7004A8AA4 /* ProductMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502B94F2B5BBDA7004A8AA4 /* ProductMocks.swift */; };
 		C50FA7C32B5ED0D000DCFAC3 /* AsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FA7C22B5ED0D000DCFAC3 /* AsyncImageLoader.swift */; };
 		C50FA7C52B5ED11F00DCFAC3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FA7C42B5ED11F00DCFAC3 /* LoadingView.swift */; };
-		C50FA7C92B5EDEB400DCFAC3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C50FA7C82B5EDEB400DCFAC3 /* Realm */; };
-		C50FA7CB2B5EDEB400DCFAC3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C50FA7CA2B5EDEB400DCFAC3 /* RealmSwift */; };
+		C51D809E2B5F1F0F00DBDE73 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D809D2B5F1F0F00DBDE73 /* AppState.swift */; };
+		C51D80A02B5F1F4800DBDE73 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D809F2B5F1F4800DBDE73 /* AppAction.swift */; };
 		C5224B2C2B5B2340003D1451 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5224B2B2B5B2340003D1451 /* Store.swift */; };
 		C5611D042B5D807D00A7E6CE /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5611D032B5D807D00A7E6CE /* Enviroment.swift */; };
 		C5611D062B5D809C00A7E6CE /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5611D052B5D809C00A7E6CE /* Reducer.swift */; };
@@ -56,13 +56,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C502B9432B5B2F2E004A8AA4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		C502B9432B5B2F2E004A8AA4 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		C502B9462B5B32C2004A8AA4 /* AnimalCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategoriesView.swift; sourceTree = "<group>"; };
 		C502B9482B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategoriesCellView.swift; sourceTree = "<group>"; };
 		C502B94B2B5BB335004A8AA4 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		C502B94F2B5BBDA7004A8AA4 /* ProductMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMocks.swift; sourceTree = "<group>"; };
 		C50FA7C22B5ED0D000DCFAC3 /* AsyncImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageLoader.swift; sourceTree = "<group>"; };
 		C50FA7C42B5ED11F00DCFAC3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		C51D809D2B5F1F0F00DBDE73 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		C51D809F2B5F1F4800DBDE73 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		C5224B2B2B5B2340003D1451 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		C5611D032B5D807D00A7E6CE /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		C5611D052B5D809C00A7E6CE /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
@@ -93,8 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C50FA7CB2B5EDEB400DCFAC3 /* RealmSwift in Frameworks */,
-				C50FA7C92B5EDEB400DCFAC3 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +180,7 @@
 		C502B9412B5B2F00004A8AA4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C502B9432B5B2F2E004A8AA4 /* Product.swift */,
+				C502B9432B5B2F2E004A8AA4 /* Animal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,16 +227,11 @@
 			path = Reusable;
 			sourceTree = "<group>";
 		};
-		C50FA7CC2B5EE09900DCFAC3 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storage;
-			sourceTree = "<group>";
-		};
 		C5224B2A2B5B2334003D1451 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				C51D809D2B5F1F0F00DBDE73 /* AppState.swift */,
+				C51D809F2B5F1F4800DBDE73 /* AppAction.swift */,
 				C5224B2B2B5B2340003D1451 /* Store.swift */,
 				C5611D052B5D809C00A7E6CE /* Reducer.swift */,
 				C5611D032B5D807D00A7E6CE /* Enviroment.swift */,
@@ -312,7 +307,6 @@
 		C574B45C2B5ACE2E007344F2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C50FA7CC2B5EE09900DCFAC3 /* Storage */,
 				C57B78A42B5C32D700F30377 /* Network */,
 			);
 			path = Services;
@@ -360,8 +354,6 @@
 			);
 			name = "Promova-iOS";
 			packageProductDependencies = (
-				C50FA7C82B5EDEB400DCFAC3 /* Realm */,
-				C50FA7CA2B5EDEB400DCFAC3 /* RealmSwift */,
 			);
 			productName = "Promova-iOS";
 			productReference = C574B42E2B5AB1AB007344F2 /* Promova-iOS.app */;
@@ -437,7 +429,6 @@
 			);
 			mainGroup = C574B4252B5AB1AA007344F2;
 			packageReferences = (
-				C50FA7C72B5EDEB400DCFAC3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = C574B42F2B5AB1AB007344F2 /* Products */;
 			projectDirPath = "";
@@ -482,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C502B9492B5B32F1004A8AA4 /* AnimalCategoriesCellView.swift in Sources */,
+				C51D80A02B5F1F4800DBDE73 /* AppAction.swift in Sources */,
 				C5611D0D2B5DAC5F00A7E6CE /* AnimalState.swift in Sources */,
 				C502B94C2B5BB335004A8AA4 /* UIColor+Hex.swift in Sources */,
 				C50FA7C52B5ED11F00DCFAC3 /* LoadingView.swift in Sources */,
@@ -496,8 +488,9 @@
 				C574B4342B5AB1AB007344F2 /* ContentView.swift in Sources */,
 				C574B4322B5AB1AB007344F2 /* Promova_iOSApp.swift in Sources */,
 				C502B9472B5B32C2004A8AA4 /* AnimalCategoriesView.swift in Sources */,
-				C502B9442B5B2F2E004A8AA4 /* Product.swift in Sources */,
+				C502B9442B5B2F2E004A8AA4 /* Animal.swift in Sources */,
 				C57B789D2B5C2C3C00F30377 /* View+NavigationShadow.swift in Sources */,
+				C51D809E2B5F1F0F00DBDE73 /* AppState.swift in Sources */,
 				C5611D0B2B5D8CB200A7E6CE /* Collections+Index.swift in Sources */,
 				C5611D0F2B5DAC7300A7E6CE /* AnimalAction.swift in Sources */,
 				C574B45E2B5ACE59007344F2 /* NetworkAPI.swift in Sources */,
@@ -825,30 +818,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C50FA7C72B5EDEB400DCFAC3 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.20.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C50FA7C82B5EDEB400DCFAC3 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C50FA7C72B5EDEB400DCFAC3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
-		};
-		C50FA7CA2B5EDEB400DCFAC3 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C50FA7C72B5EDEB400DCFAC3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C574B4262B5AB1AA007344F2 /* Project object */;
 }

@@ -70,10 +70,15 @@ struct SwipeCardView: View {
     var body: some View {
         VStack {
             ZStack {
+                if animal.content.isEmpty {
+                    CardView(
+                        content: .init(fact: "Fun facts comming soon...", image: ""),
+                        currentIndex: $currentIndex,
+                        totalCards: animal.content.count
+                    )
+                }
                 ForEach(animal.content.indices, id: \.self) { index in
                     CardView(
-                        id: animal.id,
-                        imageData: animal.image,
                         content: animal.content[index],
                         currentIndex: $currentIndex,
                         totalCards: animal.content.count
@@ -92,8 +97,6 @@ struct SwipeCardView: View {
 }
 
 struct CardView: View {
-    let id: UUID
-    let imageData: Data
     let content: Content
     @Binding var currentIndex: Int
     let totalCards: Int
@@ -109,18 +112,20 @@ struct CardView: View {
                     radius: 20, x: 0, y: 20)
             .overlay(
                 VStack {
-                    if let image = ImageLoader.imageCache[id] {
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .background(Color.gray)
-                            .padding(8)
-                    } else {
-                        AsyncImageLoader(id: id, imageData: imageData)
-                            .background(Color.gray)
-                            .padding(8)
+                    AsyncImage(url: URL(string: content.image)) { phase in
+                        switch phase {
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .background(Color.gray)
+                                .padding(8)
+                        case .empty:
+                            ProgressView()
+                        default:
+                            EmptyView()
+                        }
                     }
-                    
                     Text(content.fact)
                         .padding()
                     Spacer()

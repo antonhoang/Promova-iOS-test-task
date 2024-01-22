@@ -16,14 +16,6 @@ protocol ReducerProtocol {
     func reduce(_ state: inout State, _ action: Action, _ environment: Environment)
 }
 
-struct AppState {
-    var animalState: AnimalState
-}
-
-enum AppAction {
-    case animal(AnimalAction)
-}
-
 struct AppReducer {
     func reduce(_ state: inout AppState, _ action: AppAction, _ environment: EnviromentProtocol) {
         switch action {

@@ -20,19 +20,11 @@ struct AnimalReducer: ReducerProtocol {
             let endpoint = AnimalEndpoint()
             Task {
                 let animals = try await environment.network.asyncRequest(endPoint: endpoint, responseModel: [AnimalModel].self)
-                var imagesData: [Data] = []
-                for animal in animals {
-                    if let url = URL(string: animal.image) {
-                        let imageData = try await environment.network.asyncLoadImage(url: url)
-                        imagesData.append(imageData)
-                    }
-                }
-                
-                let mappedAnimals = zip(animals, imagesData).map {
+                let mappedAnimals = animals.map {
                     Animal(
                         title: $0.title,
                         description: $0.description,
-                        image: $1,
+                        imageURL: $0.image,
                         order: $0.order,
                         status: $0.status ?? .comingSoon,
                         content: $0.content ?? []
@@ -43,8 +35,8 @@ struct AnimalReducer: ReducerProtocol {
                     store.dispatch(.animal(.setAnimals(mappedAnimals)))
                 }
             }
-        case .setAnimals(let array):
-            state.animals = array
+        case .setAnimals(let animals):
+            state.animals = animals
         }
     }
 }

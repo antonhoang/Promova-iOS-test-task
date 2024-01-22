@@ -227,6 +227,13 @@
 			path = Reusable;
 			sourceTree = "<group>";
 		};
+		C50FA7CC2B5EE09900DCFAC3 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		C5224B2A2B5B2334003D1451 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +312,7 @@
 		C574B45C2B5ACE2E007344F2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C50FA7CC2B5EE09900DCFAC3 /* Storage */,
 				C57B78A42B5C32D700F30377 /* Network */,
 			);
 			path = Services;

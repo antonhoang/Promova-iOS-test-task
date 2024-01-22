@@ -26,8 +26,7 @@ class StoreFactory: StoreFactoryProtocol {
 struct Promova_iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            AnimalCategoriesView()
-                .environmentObject(store)
+            SplashScreenView()
         }
     }
 }

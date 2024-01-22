@@ -29,9 +29,7 @@ struct AnimalCategoriesCellView: View {
                 default:
                     EmptyView()
                 }
-            }
-            
-            
+            }            
             VStack(alignment: .leading) {
                 animalTitle
                 animalDescription

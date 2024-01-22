@@ -54,13 +54,17 @@ struct FactsView: View {
                 },
             trailing:
                 Button(action: {
-                    let shareContent = animal.content[currentIndex].fact
-                    let activityViewController = UIActivityViewController(activityItems: [shareContent], applicationActivities: nil)
-                    if let windowScene = UIApplication.shared.connectedScenes
-                        .filter({ $0.activationState == .foregroundActive })
-                        .first as? UIWindowScene,
-                        let window = windowScene.windows.first {
-                        window.rootViewController?.present(activityViewController, animated: true, completion: nil)
+                    if !animal.content.isEmpty {
+                        let shareContent = animal.content[currentIndex].fact
+                        let activityViewController = UIActivityViewController(activityItems: [shareContent], applicationActivities: nil)
+                        if let windowScene = UIApplication.shared.connectedScenes
+                            .filter({ $0.activationState == .foregroundActive })
+                            .first as? UIWindowScene,
+                           let window = windowScene.windows.first {
+                            window.rootViewController?.present(
+                                activityViewController, animated: true, completion: nil
+                            )
+                        }
                     }
                 }) {
                     Image(systemName: "square.and.arrow.up")

@@ -18,7 +18,7 @@ struct SwipeCardView: View {
             ZStack {
                 if animal.content.isEmpty {
                     CardView(
-                        content: .init(fact: "Fun facts comming soon...", image: ""),
+                        content: .init(fact: "No facts about \(animal.title)...", image: ""),
                         currentIndex: $currentIndex,
                         totalCards: animal.content.count
                     )

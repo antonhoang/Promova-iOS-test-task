@@ -27,9 +27,12 @@ struct AnimalCategoriesView: View {
                     List {
                         
                         ForEach(store.state.animalState.animals, id: \.id) { animal in
-                            ZStack {
-                                AnimalCategoriesCellView(animal: animal)
+                            HStack {
+                                ZStack {
+                                    AnimalCategoriesCellView(animal: animal)
+                                }
                             }
+                            .contentShape(Rectangle())
                             .onTapGesture {
                                 showAlert = animal.status != .free
                                 showFacts = !showAlert

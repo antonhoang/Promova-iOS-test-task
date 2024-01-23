@@ -160,7 +160,6 @@
 		C502B93E2B5B2C53004A8AA4 /* Facts */ = {
 			isa = PBXGroup;
 			children = (
-				C502B9402B5B2C60004A8AA4 /* State */,
 				C502B93F2B5B2C5B004A8AA4 /* Views */,
 			);
 			path = Facts;
@@ -176,26 +175,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C502B9402B5B2C60004A8AA4 /* State */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = State;
-			sourceTree = "<group>";
-		};
 		C502B9412B5B2F00004A8AA4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				C502B9432B5B2F2E004A8AA4 /* Animal.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		C502B9452B5B2FD0004A8AA4 /* GlobalStates */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GlobalStates;
 			sourceTree = "<group>";
 		};
 		C502B94A2B5BB323004A8AA4 /* Extensions */ = {
@@ -268,9 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				C50FA7C12B5ED0A500DCFAC3 /* Views */,
-				C57B78A52B5C37AD00F30377 /* Repository */,
 				C502B94A2B5BB323004A8AA4 /* Extensions */,
-				C502B9452B5B2FD0004A8AA4 /* GlobalStates */,
 				C502B9412B5B2F00004A8AA4 /* Models */,
 				C502B93A2B5B2C1D004A8AA4 /* Modules */,
 				C5224B2A2B5B2334003D1451 /* App */,
@@ -334,13 +317,6 @@
 				C57B789E2B5C31B200F30377 /* RequestMethod.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		C57B78A52B5C37AD00F30377 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
